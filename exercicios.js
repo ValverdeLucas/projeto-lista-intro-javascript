@@ -41,7 +41,16 @@ function imprimeIdade() {
 
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
-  // implemente sua lógica aqui
+
+  peso = +prompt("Digite o seu peso")
+  altura = +prompt("Digite a sua altura (em metros)")
+
+  pesoIMC = peso
+  alturaIMC = altura
+
+  IMC = pesoIMC / (alturaIMC * alturaIMC)
+
+  return IMC
 
 }
 
