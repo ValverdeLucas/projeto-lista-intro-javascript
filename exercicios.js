@@ -45,9 +45,9 @@ function calculaIMC(peso, altura) {
   // peso = +prompt("Digite o seu peso")
   // altura = +prompt("Digite a sua altura (em metros)")
 
-  // IMC = peso / (altura * altura)
+  IMC = peso / (altura * altura)
 
-  // return IMC
+  return IMC
 
 }
 
@@ -79,33 +79,46 @@ function imprimeTresCoresFavoritas() {
 // EXERCÍCIO 06
 function retornaStringEmMaiuscula(string) {
   
-  // string = prompt("Escreva uma frase")
-  // stringEmMaiuscula = string.toUpperCase()
-  // return stringEmMaiuscula
+  stringEmMaiuscula = string.toUpperCase()
+  return stringEmMaiuscula
 
 }
 
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
-  // implemente sua lógica aqui
+
+  custo 
+  valorIngresso
+
+  totalIngressosNecessario = custo / valorIngresso
+
+  return totalIngressosNecessario
 
 }
 
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
-  // implemente sua lógica aqui
+
+  const stringCheck1 = string1.length
+  const stringCheck2 = string2.length
+
+  const stringCheckFinal = stringCheck1 == stringCheck2
+
+  return stringCheckFinal
 
 }
 
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
-  // implemente sua lógica aqui
 
+  return array[0]
+  
 }
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
-  // implemente sua lógica aqui
+
+  return array[array.length-1]
 
 }
 
@@ -113,23 +126,51 @@ function retornaUltimoElemento(array) {
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
 
+// arrayFinal = 
+
+// return arrayFinal
+
 }
 
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
-  // implemente sua lógica aqui
+  
+  ajusteString1 = string1.toLowerCase()
+  ajusteString2 = string2.toLowerCase()
+  
+  const stringCheck = ajusteString1 === ajusteString2
+
+  console.log (stringCheck)
+
+  return stringCheck
 
 }
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
-  // implemente sua lógica aqui
+
+  const anoAtual = +prompt("Digite o ano atual")
+  const anoNascimento = +prompt("Digita o seu ano de nascimento")
+  const anoRGEmissao = +promp ("Ano em que seu RG foi emitido")
+
+  const idade = anoAtual - anoNascimento
+  const tempoRG = anoAtual - anoRGEmissao
+
+  const renovacaoAte20anos =  
+  const renovacaoAte50anos = 
+  const renovacaoApos50anos = 
+
+  const checkRenovacao = 
+
+  console.log(`A carteira precisa ser renovada? ${checkRenovacao}`)
 
 }
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
   // implemente sua lógica aqui
+
+  checagemAno = 
 
 }
 
