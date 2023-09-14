@@ -68,7 +68,7 @@ function imprimeTresCoresFavoritas() {
 
   const cor1 = prompt("Digite a sua cor favorita")
   const cor2 = prompt("Digite a sua segunda cor favorita")
-  const cor3 = prompt("Digite a sua terceira cor favotira")
+  const cor3 = prompt("Digite a sua terceira cor favorita")
 
   arrayDeCores = [cor1, cor2, cor3]
 
@@ -133,18 +133,18 @@ function trocaPrimeiroEUltimo(array) {
 }
 
 // EXERCÍCIO 12
-function checaIgualdadeDesconsiderandoCase(string1, string2) {
+// function checaIgualdadeDesconsiderandoCase(string1, string2) {
   
-  ajusteString1 = string1.toLowerCase()
-  ajusteString2 = string2.toLowerCase()
+//   ajusteString1 = string1.toLowerCase()
+//   ajusteString2 = string2.toLowerCase()
   
-  const stringCheck = ajusteString1 === ajusteString2
+//   const stringCheck = ajusteString1 === ajusteString2
 
-  console.log (stringCheck)
+//   console.log (stringCheck)
 
-  return stringCheck
+//   return stringCheck
 
-}
+
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
@@ -156,11 +156,15 @@ function checaRenovacaoRG() {
   const idade = anoAtual - anoNascimento
   const tempoRG = anoAtual - anoRGEmissao
 
-  const renovacaoAte20anos =  
-  const renovacaoAte50anos = 
-  const renovacaoApos50anos = 
+  const checkRenovacaoAte20Anos = idade <= 20
+  const checkRenovacaoAte50Anos = idade >= 20 && idade <= 50
+  const checkRenovacaoApos50Anos = idade > 50
 
-  const checkRenovacao = 
+  const renovacaoAte20anos = checkRenovacaoAte20Anos === true
+  const renovacaoAte50anos = checkRenovacaoAte50Anos === true
+  const renovacaoApos50anos = checkRenovacaoApos50Anos === true
+
+  const checkRenovacao =  
 
   console.log(`A carteira precisa ser renovada? ${checkRenovacao}`)
 
@@ -168,14 +172,25 @@ function checaRenovacaoRG() {
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
-  // implemente sua lógica aqui
 
-  checagemAno = 
+  divisivelPor4 = ano % 4 === 0
+  divisivelPor100 = ano % 100 === 0
+  divisivelPor400 = ano % 400 === 0
 
+  checagemAno = divisivelPor4 && !divisivelPor100 || divisivelPor400
+
+  return checagemAno
 }
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
-  // implemente sua lógica aqui
+
+  const idade = prompt("Você tem mais de 18 anos? (Responda: sim ou não)")
+  const ensinoMedio = prompt("Você possui ensino médio completo? (Responda: sim ou não)")
+  const disponibilidade = prompt("  * Você possui disponibilidade exclusiva durante os horários do curso? (Responda: sim ou não)")
+
+  const validadeInscricao = idade === "sim" && ensinoMedio === "sim" && disponibilidade === "sim"
+
+  console.log(validadeInscricao)
 
 }
