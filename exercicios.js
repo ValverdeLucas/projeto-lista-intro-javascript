@@ -42,22 +42,24 @@ function imprimeIdade() {
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
 
-  peso = +prompt("Digite o seu peso")
-  altura = +prompt("Digite a sua altura (em metros)")
+  // peso = +prompt("Digite o seu peso")
+  // altura = +prompt("Digite a sua altura (em metros)")
 
-  pesoIMC = peso
-  alturaIMC = altura
+  // IMC = peso / (altura * altura)
 
-  IMC = pesoIMC / (alturaIMC * alturaIMC)
-
-  return IMC
+  // return IMC
 
 }
 
 // EXERCÍCIO 04
 function imprimeInformacoesUsuario() {
-  // implemente sua lógica aqui
-  // "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
+
+  const nome = prompt("Digite o seu nome")
+  const idade = prompt("Digite a sua idade")
+  const email = prompt("Digite o seu e-mail")
+
+
+  console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`)
 
 }
 
