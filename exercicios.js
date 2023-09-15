@@ -22,7 +22,7 @@ function calculaAreaRetangulo() {
   const altura = +prompt("Digite a altura do retângulo")
   const largura = +prompt("Digite a largura do retângulo")
 
-  area = altura * largura
+  const area = altura * largura
   console.log(area)
 
 }
@@ -31,10 +31,10 @@ function calculaAreaRetangulo() {
 // EXERCÍCIO 02
 function imprimeIdade() {
   
-  anoAtual = +prompt("Digite o ano atual")
-  anoNascimento = +prompt("Digite o ano do seu nascimento")
+  const anoAtual = +prompt("Digite o ano atual")
+  const anoNascimento = +prompt("Digite o ano do seu nascimento")
 
-  idade = anoAtual - anoNascimento
+  const idade = anoAtual - anoNascimento
   console.log(idade)
 
 }
@@ -87,10 +87,7 @@ function retornaStringEmMaiuscula(string) {
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
 
-  custo 
-  valorIngresso
-
-  totalIngressosNecessario = custo / valorIngresso
+  const totalIngressosNecessario = custo / valorIngresso
 
   return totalIngressosNecessario
 
@@ -124,60 +121,74 @@ function retornaUltimoElemento(array) {
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
-  // implemente sua lógica aqui
 
-// arrayFinal = 
+  const arrayAuxiliar = array.slice()
+  arrayAuxiliar.reverse()
 
-// return arrayFinal
+  // console.log(`Array: ${array}` )
+  // console.log(`Array Aux: ${arrayAuxiliar}`)
+
+  array.splice([array.length-1], 1, arrayAuxiliar[arrayAuxiliar.length-1])
+  // console.log("Pós alteração do último número:", array)
+  // console.log("Principal Primeiro", array[0])
+  // console.log("Auxiliar Primeiro:", arrayAuxiliar[0])
+  array.splice(!array[0], 1, arrayAuxiliar[0])
+  // console.log(array)
+
+  return array
 
 }
 
 // EXERCÍCIO 12
-// function checaIgualdadeDesconsiderandoCase(string1, string2) {
+function checaIgualdadeDesconsiderandoCase(string1, string2) {
   
-//   ajusteString1 = string1.toLowerCase()
-//   ajusteString2 = string2.toLowerCase()
+  const  ajusteString1 = string1.toLowerCase()
+  const  ajusteString2 = string2.toLowerCase()
   
-//   const stringCheck = ajusteString1 === ajusteString2
+  const stringCheck = ajusteString1 === ajusteString2
 
-//   console.log (stringCheck)
+  console.log (stringCheck)
 
-//   return stringCheck
+  return stringCheck
 
-
+}
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
 
   const anoAtual = +prompt("Digite o ano atual")
   const anoNascimento = +prompt("Digita o seu ano de nascimento")
-  const anoRGEmissao = +promp ("Ano em que seu RG foi emitido")
+  const anoRGEmissao = +prompt("Ano em que seu RG foi emitido")
 
   const idade = anoAtual - anoNascimento
   const tempoRG = anoAtual - anoRGEmissao
 
-  const checkRenovacaoAte20Anos = idade <= 20
-  const checkRenovacaoAte50Anos = idade >= 20 && idade <= 50
-  const checkRenovacaoApos50Anos = idade > 50
+  const checkIdadeAte20Anos = idade <= 20
+  const checkIdadeAte50Anos = idade >= 20 && idade <= 50
+  const checkIdadeApos50Anos = idade > 50
 
-  const renovacaoAte20anos = checkRenovacaoAte20Anos === true
-  const renovacaoAte50anos = checkRenovacaoAte50Anos === true
-  const renovacaoApos50anos = checkRenovacaoApos50Anos === true
+  const checkRGAte20Anos = tempoRG >= 5
+  const checkRGAte50Anos = tempoRG >= 10
+  const checkRGApos50anos = tempoRG >= 15
 
-  const checkRenovacao =  
+  const renovacaoAte20anos = checkIdadeAte20Anos === true && checkRGAte20Anos === true
+  const renovacaoAte50anos = checkIdadeAte50Anos === true && checkRGAte50Anos === true
+  const renovacaoApos50anos = checkIdadeApos50Anos === true && checkRGApos50anos === true
 
-  console.log(`A carteira precisa ser renovada? ${checkRenovacao}`)
+  const checkRenovacao = renovacaoAte20anos === true || renovacaoAte50anos === true || renovacaoApos50anos === true 
+
+  console.log(checkRenovacao)
 
 }
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
 
-  divisivelPor4 = ano % 4 === 0
-  divisivelPor100 = ano % 100 === 0
-  divisivelPor400 = ano % 400 === 0
+  const  divisivelPor4 = ano % 4 === 0
+  const divisivelPor100 = ano % 100 === 0
+  const divisivelPor400 = ano % 400 === 0
 
-  checagemAno = divisivelPor4 && !divisivelPor100 || divisivelPor400
+  const checagemAno = divisivelPor4 && !divisivelPor100 || divisivelPor400
 
   return checagemAno
 }
